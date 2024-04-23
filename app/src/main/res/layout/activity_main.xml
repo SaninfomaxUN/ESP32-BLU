@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#252525"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:flexDirection="row"
+                app:flexWrap="wrap"
+                app:justifyContent="space_between">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnActivateBluetooth"
+                    style="?attr/materialIconButtonFilledStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/btn_no_activate_bluetooth"
+                    android:textSize="18sp"
+                    app:backgroundTint="#1671BA"
+                    app:cornerRadius="10dp"
+                    app:icon="@drawable/baseline_bluetooth_36"
+                    app:iconSize="32dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDeactivateBluetooth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/btn_deactivate_bluetooth"
+                    app:backgroundTint="#787878"
+                    app:cornerRadius="10dp" />
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:flexDirection="row"
+                app:flexWrap="wrap"
+                app:justifyContent="space_between">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnScan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/btn_scan"
+                    app:backgroundTint="#EB8BC34A"
+                    app:cornerRadius="10dp" />
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/list_devices"
+                    app:layout_flexGrow="1">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/selectDevice"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="none" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnConnect"
+                style="@style/Widget.Material3.Button.ElevatedButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:enabled="false"
+                android:text="@string/btn_connect"
+                android:textColor="#3B8E3E"
+                app:backgroundTint="#F1FFF2" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchLabel1"
+                    android:layout_width="203dp"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:enabled="false"
+                    android:text="@string/switch_label_1"
+                    android:textColor="#EFE5E5"
+                    android:textSize="28sp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchLabel2"
+                    android:layout_width="203dp"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:enabled="false"
+                    android:text="@string/switch_label_2"
+                    android:textColor="#EFE5E5"
+                    android:textSize="28sp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switchLabel3"
+                    android:layout_width="203dp"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:enabled="false"
+                    android:text="@string/switch_label_3"
+                    android:textColor="#EFE5E5"
+                    android:textSize="28sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputSend"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:enabled="false"
+                    android:hint="@string/text_label_1">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#FFFFFF"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSend"
+                    style="@style/Widget.Material3.Button.ElevatedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:enabled="false"
+                    android:text="@string/btn_send"
+                    android:textColor="#FFFFFF"
+                    app:backgroundTint="#8EC54F"
+                    app:cornerRadius="10dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,28 @@
+<resources>
+    <!-- App Strings -->
+    <string name="app_name">ESP32-BLU</string>
+
+    <!-- Splash Strings -->
+    <string name="welcome_text1">ESP32-BLU</string>
+    <string name="develop_by">Developed by:</string>
+    <string name="developer">S4Nツ</string>
+
+
+    <!-- Button Strings -->
+    <string name="btn_no_activate_bluetooth">No Activate</string>
+    <string name="btn_activate_bluetooth">Activate</string>
+    <string name="btn_deactivate_bluetooth">End Connection</string>
+    <string name="btn_scan">Scan</string>
+    <string name="list_devices">List of Devices</string>
+    <string name="btn_connect">Connect</string>
+
+    <!-- Switch Strings -->
+    <string name="switch_label_1">Led 1</string>
+    <string name="switch_label_2">Led 2</string>
+    <string name="switch_label_3">Led 3</string>
+
+    <!-- Send Strings -->
+    <string name="text_label_1">Ingrese el comando: </string>
+    <string name="btn_send">Enviar</string>
+
+</resources>
